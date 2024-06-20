@@ -1,0 +1,15 @@
+import random
+
+def generate_hormuud_numbers(n):
+    numbers = []
+    prefixes = ['61', '68']
+    for _ in range(n):
+        prefix = random.choice(prefixes)
+        number = prefix + ''.join([str(random.randint(0, 9)) for _ in range(7)])
+        numbers.append(number)
+    return numbers
+
+# Generate 100 Hormuud numbers
+hormuud_numbers = generate_hormuud_numbers(100)
+for number in hormuud_numbers:
+    print(number)
